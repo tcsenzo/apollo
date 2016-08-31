@@ -1,0 +1,18 @@
+div.menu-toggle
+  each line in [0,1,2]
+    div.line
+div.logo
+  a(href="/")= 'Qettal de Mesquita'
+nav.menu-user
+  ul.inline-list
+    if loggedUser
+      li.list-item
+        a(href="/perfil") #{cookies.qettal2LoggedUser}
+      li.list-item
+        form(method="POST" action="/logout")
+          button(type="submit").logout-button= t("header.logout")
+    else
+      li.list-item
+        a(href="/login")= t('header.login')
+      li.list-item
+        a(href="/cadastro")= t('header.signup')

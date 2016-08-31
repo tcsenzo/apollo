@@ -1,0 +1,36 @@
+{
+  "name": "apollo",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node app/app.js",
+    "postinstall": "grunt build && bower install"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "bower": "^1.7.7",
+    "browserify": "^13.0.0",
+    "cookie-parser": "^1.4.3",
+    "dateformat": "^1.0.12",
+    "express": "^4.13.4",
+    "express-session": "^1.14.0",
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^5.0.0",
+    "grunt-contrib-stylus": "^1.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "i18n": "^0.8.1",
+    "jade": "^1.11.0",
+    "jquery": "^3.1.0",
+    "jquery-mask-plugin": "github:igorescobar/jQuery-Mask-Plugin",
+    "load-grunt-config": "^0.19.1",
+    "load-grunt-tasks": "^3.4.1",
+    "moment": "^2.14.1",
+    "morgan": "^1.7.0",
+    "nodemon": "^1.10.2",
+    "numeral": "^1.5.3",
+    "request": "^2.73.0",
+    "underscore": "^1.8.3"
+  }
+}

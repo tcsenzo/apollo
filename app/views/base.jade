@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+	block meta
+		include ./_partials/_meta
+	block title
+		title Qettal
+	block css
+		include ./_partials/_css-head
+			
+body
+	div.overlay
+	block header
+		header.header
+			include ./_partials/_header
+			
+	block side-menu
+		secion.side-menu
+			- //include ./_partials/_side-menu
+	
+	section.page-wrapper
+		section.before-container
+			block before-container
+		section.container
+			block container
+		
+		footer.footer
+			block footer
+	
+	block js-footer
+		include ./_partials/_js-footer

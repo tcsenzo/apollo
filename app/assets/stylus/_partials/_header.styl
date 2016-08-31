@@ -1,0 +1,51 @@
+.logo
+  font-family: ptSans
+  margin: 5px 0 0 30px
+  logo-style()
+  a
+    color: main-color
+    &:hover
+      cursor: pointer
+      text-decoration: none
+
+.header
+  default-transition(0.4s)
+  display: block
+  padding: 15px
+  box-sizing: border-box
+  width: 100%
+  position: fixed
+  top: 0
+  z-index: 10
+  background-color: header-font-color
+  color: main-color
+  .menu-user
+    float: right
+    margin-top: 10px
+    a, .logout-button
+      color: main-color
+      background: none
+      border: none
+      font-weight: normal
+      font-size: 1.1em
+      &:hover, &:active
+        text-decoration: none
+
+.menu-toggle
+  position: relative
+  float: left
+  height: 100%
+  width: 35px
+  padding: 9px 5px
+  box-sizing: border-box
+  &:hover
+    cursor: pointer
+  .line
+    height: 2px
+    background-color: main-color
+    margin: 7px 0
+    default-border-radius()
+    &:first-child
+      margin-top: 0
+    &:last-child
+      margin-bottom: 0

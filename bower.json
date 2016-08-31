@@ -1,0 +1,15 @@
+{
+  "name": "apollo",
+  "description": "",
+  "componentsDirectory": "app/assets/bower_components",
+  "authors": [
+    "Gustavo Melo <gcmelo@sp.r7.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "https://github.com/tcsenzo/apollo",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
