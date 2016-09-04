@@ -10,8 +10,15 @@ class Router {
 
 		app.get('/login', (req, res) => controllers.loginController.index(req, res));
 		app.post('/login', (req, res) => controllers.loginController.login(req, res));
+		app.post('/logout', (req, res) => controllers.loginController.logout(req, res));
 
-		app.post('/teatros/novo', (req, res) => controllers.signUpController.create(req, res));
+		app.get('/teatros/novo', helpers.auth.authorize, (req, res) => controllers.theaterController.new(req, res));
+		app.post('/teatros/novo', helpers.auth.authorize, (req, res) => controllers.theaterController.create(req, res));
+
+		app.get('/teatros/:theaterId(\\d+)/eventos', helpers.auth.authorize, (req, res) => controllers.eventsController.index(req, res));
+
+		app.get('/teatros/:theaterId(\\d+)/eventos/novo', helpers.auth.authorize, (req, res) => controllers.eventsController.new(req, res));
+		app.post('/teatros/:theaterId(\\d+)/eventos/novo', helpers.auth.authorize, (req, res) => controllers.eventsController.create(req, res));
 	}
 }
 

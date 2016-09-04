@@ -1,0 +1,29 @@
+extends /base
+
+block container
+  form(action="/teatros/novo" method="POST")
+    div.form-group
+      label(for="name")= t("theaters.new.name")
+      input(type="text" name="name" placeholder=t("theaters.new.name")).form-control
+    div.form-group
+      label(for="street")= t("theaters.new.street")
+      input(type="text" name="address[street]" placeholder=t("theaters.new.street")).form-control
+    div.form-group
+      label(for="number")= t("theaters.new.number")
+      input(type="text" name="address[number]" placeholder=t("theaters.new.number")).form-control
+    div.form-group
+      label(for="district")= t("theaters.new.district")
+      input(type="text" name="address[district]" placeholder=t("theaters.new.district")).form-control
+    div.form-group
+      label(for="city")= t("theaters.new.city")
+      input(type="text" name="address[city]" placeholder=t("theaters.new.city")).form-control
+    div.form-group
+      label(for="state")= t("theaters.new.state")
+      input(type="text" name="address[state]" placeholder=t("theaters.new.state")).form-control
+    div.form-group
+      label(for="country")= t("theaters.new.country")
+      input(type="text" name="address[country]" placeholder=t("theaters.new.country")).form-control
+    div.form-group
+      label(for="zip_code")= t("theaters.new.zip_code")
+      input(type="text" name="address[zip_code]" placeholder=t("theaters.new.zip_code")).form-control
+    button(type="submit").btn.btn-default= t("theaters.new.save")

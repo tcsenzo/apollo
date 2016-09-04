@@ -1,0 +1,29 @@
+extends /base
+
+block container
+  form(method="POST")
+    input(type="hidden" name="theater[id]" value="#{theaterId}")
+    div.form-group
+      label(for="name")= t("events.new.name")
+      input(type="text" name="name" placeholder=t("events.new.name")).form-control
+    div.form-group
+      label(for="description")= t("events.new.description")
+      input(type="text" name="description" placeholder=t("events.new.description")).form-control
+    div.form-group
+      label(for="price")= t("events.new.price")
+      div.input-group
+        div.input-group-addon R$
+        input(type="text" name="price" placeholder=t("events.new.price") data-mask="#.##0,00" data-mask-reverse="true").form-control
+    div.form-group
+      label(for="original_price")= t("events.new.original_price")
+      div.input-group
+        div.input-group-addon R$
+        input(type="text" name="original_price" placeholder=t("events.new.original_price") data-mask="#.##0,00" data-mask-reverse="true").form-control
+    div.form-group
+      label(for="available_quantity")= t("events.new.available_quantity")
+      input(type="text" name="available_quantity" placeholder=t("events.new.available_quantity")).form-control
+    div.form-group
+      label(for="scheduled_date")= t("events.new.scheduled_date")
+      input(type="text" name="scheduled_date" placeholder=t("events.new.scheduled_date") data-mask="00/00/0000 00:00").form-control
+    
+    button(type="submit").btn.btn-default= t('events.new.save')

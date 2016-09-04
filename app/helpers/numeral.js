@@ -17,6 +17,10 @@ class Numeral {
   real(price) {
     return numeral(price).format(`$ 0.00`);
   }
+
+  unformat(string) {
+    return numeral().unformat(string);
+  }
 }
 
 module.exports = new Numeral();

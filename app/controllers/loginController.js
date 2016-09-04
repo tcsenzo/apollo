@@ -68,6 +68,7 @@ class LoginController {
 
   logout(req, res) {
     res.clearCookie('JSESSIONID');
+    res.clearCookie('qettal2LoggedUser');
     res.redirect('/');
   }
 }

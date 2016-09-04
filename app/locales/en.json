@@ -9,13 +9,12 @@
 		"signup": "Cadastrar",
 		"logout": "Sair"
 	},
-	"search-form": {
-		"placeholder": "Procure por eventos, lugares ou teatros",
-		"button": "Buscar"
+	"index": {
+		"newTheaterAlert": {
+			"title": "Sucesso!",
+			"content": "Novo teatro criado com sucesso."
+		}
 	},
-	"fiveHours": "Eventos nas próximas 5h",
-	"eightHours": "Eventos nas próximas 8h",
-	"twelveHours": "Eventos nas próximas 12h",
 	"signup": {
 		"signup": "Crie sua conta",
 		"socialLogin": "Cadastre-se com seu facebook",
@@ -42,68 +41,32 @@
 			"content": "O e-mail ou senha não foram encontrados"
 		}
 	},
-	"profile": {
-		"profile": "Bem vindo ao seu perfil"
-	},
-	"event": {
-		"description": "Descrição",
-		"from": "de: ",
-		"to": "por: ",
-		"specialTicket": "Meia entrada",
-		"ticketType": "Tipo do ingresso",
-		"ticketAmount": "Quantidade",
-		"buy": "Comprar o ingresso",
-		"addField": "Adicionar"
-	},
-	"checkout": {
-		"reviewTitle": "Confirme seu pedido",
-		"paymentTitle": "Pagamento",
-		"itemsTable": {
-			"quantity": "Quantidade",
-			"item": "Tipo do ingresso",
-			"unitPrice": "Preço unitário",
-			"amountPrice": "Subtotal",
-			"total": "Total"
-		},
-		"checkoutForm": {
-			"personalData": "Dados pessoais",
-			"creditCardData": "Dados do cartão de crédito",
-			"fullName": "Nome completo",
-			"birthDate": "Data de nascimento",
-			"phone": "Telefone ou celular",
-			"cpf": "CPF",
-			"checkout": "Confirmar",
-			"cardNumber": "Número do cartão",
-			"cardCvc": "CVC",
-			"cardExpMonth": "Mês de expiração",
-			"cardExpYear": "Ano de expiração"
+	"theaters": {
+		"new": {
+			"name": "Nome",
+			"street": "Rua",
+			"number": "Número",
+			"district": "Bairro",
+			"city": "Cidade",
+			"state": "Estado",
+			"country": "País",
+			"zip_code": "CEP",
+			"save": "Cadastrar"
 		}
 	},
-	"success": {
-		"title": "Tudo certo!",
-		"checkYourEmail": "O ingresso foi enviado para o seu e-mail, você deve mostra-lo para entrar no evento",
-		"haveFun": "Divirta-se!"
-	},
-	"history": {
-		"title": "Histórico de compras",
-		"paymentNotConfirmed": "O pagamento dessa compra ainda não foi confirmado.",
-		"ticketsListTitle": "Valor total <span class=\"value\">{{valor}}</span>",
-		"seeAllQrCodes": "Ver todos os QrCodes",
-		"printAll": "Imprimir todos",
-		"purchaseDate": "Data da compra: ",
-		"eventDate": "Data do evento: ",
-		"itemsTable": {
-			"ticketType": "Tipo",
-			"ticketPrice": "Preço",
-			"options": "Opções",
-			"showTicket": "Mostrar ingresso"
+	"events": {
+		"newEventAlert": {
+			"title": "Sucesso!",
+			"content": "Novo evento criado com sucesso."
 		},
-		"showAll": "Mostrar todos"
-	},
-	"ticket": {
-		"title": "<b>Qettal</b> Ingresso",
-		"event": "Evento: ",
-		"date": "Data: ",
-		"ticketType": "Tipo do ingresso: "
+		"new": {
+			"name": "Nome",
+			"description": "Descrição",
+			"price": "Preço",
+			"original_price": "Preço original",
+			"available_quantity": "Quantidade disponível",
+			"scheduled_date": "Data do evento",
+			"save": "Cadastrar"
+		}
 	}
 }

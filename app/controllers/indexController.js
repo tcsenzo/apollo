@@ -1,10 +1,18 @@
 let services = require(`../services`),
-    _ = require(`underscore`);
+    helpers = require('../helpers'),
+    config = require('../config');
 
 class Index {
 
   index(req, res) {
-    res.render('index/index');
+    helpers.requestMid.request({
+      req: req,
+      res: res,
+      url: `${config.theaterEventsApi}/theaters`,
+      cb: (apiError, apiRes, apiBody) => {
+        res.render('index/index', {theaters: JSON.parse(apiBody).theaters});
+      }
+    });
   }
 
 }

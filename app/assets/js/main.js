@@ -1,1 +1,2 @@
-// all application pages js here
+window.$ = require('jquery');
+require('jquery-mask-plugin');

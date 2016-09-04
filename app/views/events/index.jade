@@ -1,0 +1,9 @@
+extends /base
+
+block container
+  if req.query.newEvent
+    include ./_new-event-alert.jade
+  each event in events
+    div
+      a(href="eventos/#{event.id}") #{event.name}
+    

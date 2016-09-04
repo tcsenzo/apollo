@@ -1,3 +1,8 @@
 extends /base
 
 block container
+  if req.query.newTheater
+    include ./_new-theater-alert.jade
+  each theater in theaters
+    div
+      a(href="/teatros/4/eventos") #{theater.name}
