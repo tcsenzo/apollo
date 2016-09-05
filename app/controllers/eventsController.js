@@ -5,11 +5,12 @@ let helpers = require('../helpers'),
 class EventsController {
 
   index(req, res) {
-    //let theaterId = req.params.theaterId;
+    let theaterId = req.params.theaterId;
+
     helpers.requestMid.request({
       req: req,
       res: res,
-      url: `${config.theaterEventsApi}/events`,
+      url: `${config.theaterEventsApi}/theaters/${theaterId}`,
       cb: (apiError, apiRes, apiBody) => {
         res.render('events/index', {events: JSON.parse(apiBody).events});
       }

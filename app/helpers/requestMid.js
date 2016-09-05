@@ -20,7 +20,7 @@ class RequestMid {
 
     request(requestOptions, (error, response, body) => {
       if(response.statusCode === 401) {
-        options.res.redirect(`/login?posLogin=${encodeURIComponent(escape(options.req.url))}`);
+        options.res.redirect(`/login`);
         return false;
       }
 

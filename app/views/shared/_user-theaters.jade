@@ -1,0 +1,5 @@
+if req.userTheaters
+  div.theater-select
+    select.user-theaters-options
+      each theater in req.userTheaters
+        option(value="#{theater.id}") #{theater.name}

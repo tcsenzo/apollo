@@ -36,6 +36,8 @@ class LoginController {
   }
 
   getUsername(req, res) {
+    let that = this;
+
     helpers.requestMid.request({
       req: req,
       res: res,
@@ -46,12 +48,7 @@ class LoginController {
           req.headers.cookie += '; qettal2LoggedUser=' + loggedUser.name;
           res.cookie('qettal2LoggedUser', loggedUser.name);
 
-          if(req.body.posLogin) {
-            res.redirect(decodeURIComponent(unescape(req.body.posLogin)));
-          }
-          else {
-            res.redirect('/');
-          }
+          that.getUserTheaters(req, res);
         }
         else {
           res.render('login/index', {
@@ -61,6 +58,30 @@ class LoginController {
               'content': req.t('login.message.content')
             }
           });
+        }
+      }
+    });
+  }
+
+  getUserTheaters(req, res) {
+    helpers.requestMid.request({
+      req: req,
+      res: res,
+      url: `${config.theaterEventsApi}/theaters`,
+      cb: (apiError, apiRes, apiBody) => {
+        if(apiRes.statusCode === 200 || apiRes.statusCode === 201) {
+          let theatersJSON = JSON.parse(apiBody).theaters;
+          req.userTheaters = theatersJSON;
+
+          if(theatersJSON.length === 0) {
+            res.redirect('/teatro/novo');
+          }
+          else {
+            res.redirect(`/teatros/${req.userTheaters[0].id}/eventos`);
+          }
+        }
+        else {
+          res.redirect('/login');
         }
       }
     });

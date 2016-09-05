@@ -1,6 +1,7 @@
 extends /base
 
 block container
+  include /shared/_user-theaters
   if req.query.newEvent
     include ./_new-event-alert.jade
   each event in events
