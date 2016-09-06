@@ -13,9 +13,11 @@ body
 	block header
 		header.header
 			include ./_partials/_header
-			
+	
+	block active-menu
+		- var activeMenu = t('sideMenu.events');
 	block side-menu
-		secion.side-menu
+		aside.side-menu-container
 			include ./_partials/_side-menu
 	
 	section.page-wrapper

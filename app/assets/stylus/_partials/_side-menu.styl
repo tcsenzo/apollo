@@ -1,4 +1,4 @@
-.side-menu
+.side-menu-container
   width: 100px
   height: 100%
   position: fixed
@@ -6,3 +6,27 @@
   top: 75px
   background-color: _grey
   border-right: 1px solid _medium_grey
+
+  .list-container
+    margin: 0
+    padding: 0
+
+  .list-item
+    a
+      default-transition()
+      display: block
+      padding: 15px 5px
+      text-align: center
+      color: main-color
+      border-bottom: 1px solid darken(_grey, 30%)
+
+      &:hover
+        text-decoration: none
+        background-color: darken(_grey, 10%)
+
+    .item-icon
+      font-size: 1.5em
+      margin-bottom: 10px
+
+    &.active
+      background-color: darken(_grey, 10%)

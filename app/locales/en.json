@@ -1,8 +1,10 @@
 {
-	"menu": {
-		"profile": "Meu perfil",
-		"purchasesHistoy": "Histórico de compras",
-		"close": "Fechar"
+	"sideMenu": {
+		"events": "Eventos",
+		"config": "Configurar teatro",
+		"sells": "Vendas",
+		"newTheater": "Novo teatro",
+		"newEvent": "Novo evento"
 	},
 	"header": {
 		"login": "Entrar",

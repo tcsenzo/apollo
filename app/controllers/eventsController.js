@@ -5,6 +5,7 @@ let helpers = require('../helpers'),
 class EventsController {
 
   index(req, res) {
+    debugger
     let theaterId = req.params.theaterId;
 
     helpers.requestMid.request({

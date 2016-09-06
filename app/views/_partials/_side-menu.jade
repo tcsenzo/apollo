@@ -1,7 +1,34 @@
-ul
-  li
-    div.lalala
-  li
-    div.lalala
-  li
-    div.lalala
+-
+  var menus = [
+    {
+      'name': t('sideMenu.events'),
+      'iconClass': 'fa fa-list',
+      'path': '#'
+    },
+    {
+      'name': t('sideMenu.sells'),
+      'iconClass': 'fa fa-line-chart',
+      'path': '#'
+    },
+    {
+      'name': t('sideMenu.newEvent'),
+      'iconClass': 'fa fa-plus',
+      'path': '#'
+    },
+    {
+      'name': t('sideMenu.newTheater'),
+      'iconClass': 'fa fa-plus',
+      'path': '#'
+    },
+  ];
+
+nav
+  ul.list-container
+  
+    each menu in menus
+      li(class="#{activeMenu == menu.name ? 'active' : ''}").list-item
+        a(href="#{menu.path}")
+          div.item-icon
+            i(class="#{menu.iconClass}")
+          div.item-text
+            div #{menu.name}
