@@ -1,5 +1,9 @@
 if req.userTheaters
-  div.theater-select
-    select.user-theaters-options
+  div.theater-select.btn-group
+    button(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false").btn.btn-default.dropdown-toggle
+      | #{req.currentTheater.name}
+      span.fa.fa-caret-down
+    
+    ul.dropdown-menu
       each theater in req.userTheaters
-        option(value="#{theater.id}") #{theater.name}
+        li: a(href="/teatros/#{theater.id}/eventos") #{theater.name}
