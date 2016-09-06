@@ -3,22 +3,22 @@
     {
       'name': t('sideMenu.events'),
       'iconClass': 'fa fa-list',
-      'path': '#'
+      'path': '/teatros/' + req.currentTheater.id + '/eventos'
     },
     {
       'name': t('sideMenu.sells'),
       'iconClass': 'fa fa-line-chart',
-      'path': '#'
+      'path': '/teatros/' + req.currentTheater.id + '/vendas'
     },
     {
       'name': t('sideMenu.newEvent'),
       'iconClass': 'fa fa-plus',
-      'path': '#'
+      'path': '/teatros/' + req.currentTheater.id + '/eventos/novo'
     },
     {
       'name': t('sideMenu.newTheater'),
       'iconClass': 'fa fa-plus',
-      'path': '#'
+      'path': '/teatros/novo'
     },
   ];
 

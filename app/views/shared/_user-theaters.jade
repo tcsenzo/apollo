@@ -7,3 +7,9 @@ if req.userTheaters
     ul.dropdown-menu
       each theater in req.userTheaters
         li: a(href="/teatros/#{theater.id}/eventos") #{theater.name}
+      
+      li(role="separator").divider
+      li
+        a(href="/teatros/novo") 
+          i.fa.fa-plus
+          | #{t('sideMenu.newTheater')}

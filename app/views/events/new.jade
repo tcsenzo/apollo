@@ -1,6 +1,10 @@
 extends /base
 
+block active-menu
+  - var activeMenu = t('sideMenu.newEvent');
+
 block container
+  include /shared/_user-theaters
   form(method="POST")
     input(type="hidden" name="theater[id]" value="#{theaterId}")
     div.form-group
