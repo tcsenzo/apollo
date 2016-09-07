@@ -2,7 +2,7 @@
 	"sideMenu": {
 		"events": "Eventos",
 		"config": "Configurar teatro",
-		"sells": "Vendas",
+		"sales": "Vendas",
 		"newTheater": "Novo teatro",
 		"newEvent": "Novo evento"
 	},
