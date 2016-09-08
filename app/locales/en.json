@@ -1,4 +1,8 @@
 {
+	"ticketTypes": {
+		"FULL": "Inteira",
+		"HALF": "Meia"
+	},
 	"sideMenu": {
 		"events": "Eventos",
 		"config": "Configurar teatro",

@@ -3,7 +3,7 @@ let controllers = require('./controllers'),
 
 class Router {
 	constructor(app) {
-		app.get('/', helpers.auth.authorize, helpers.theatersByUser.getTheaters, (req, res) => controllers.indexController.index(req, res));
+		app.get('/', helpers.auth.authorize, helpers.theatersByUser.getTheaters.bind(helpers.theatersByUser), (req, res) => controllers.indexController.index(req, res));
 
 		app.get('/cadastro', (req, res) => controllers.signUpController.index(req, res));
 		app.post('/cadastro', (req, res) => controllers.signUpController.create(req, res));

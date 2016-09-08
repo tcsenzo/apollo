@@ -23,10 +23,15 @@ class GetUserTheaters {
 
           if(theatersJSON.length === 0) {
             res.redirect('/teatros/novo');
+            return false;
           }
-          else {
-            next();
+
+          if(req.path === '/') {
+            res.redirect(`/teatros/${theatersJSON[0].id}/eventos`);
+            return false;
           }
+
+          next();
         }
       }
     });
