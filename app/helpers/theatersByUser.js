@@ -22,7 +22,7 @@ class GetUserTheaters {
           });
 
           if(theatersJSON.length === 0) {
-            res.redirect('/teatro/novo');
+            res.redirect('/teatros/novo');
           }
           else {
             next();

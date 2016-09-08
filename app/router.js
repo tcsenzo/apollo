@@ -13,7 +13,7 @@ class Router {
 		app.post('/logout', (req, res) => controllers.loginController.logout(req, res));
 
 		app.get('/teatros/*', helpers.auth.authorize);
-		app.get('/teatros/*', helpers.theatersByUser.getTheaters.bind(helpers.theatersByUser));
+		app.get('/teatros/:theaterId(\\d+)/*', helpers.theatersByUser.getTheaters.bind(helpers.theatersByUser));
 
 		app.get('/teatros/novo', (req, res) => controllers.theaterController.new(req, res));
 		app.post('/teatros/novo', (req, res) => controllers.theaterController.create(req, res));

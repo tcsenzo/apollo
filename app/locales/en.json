@@ -70,5 +70,15 @@
 			"scheduled_date": "Data do evento",
 			"save": "Cadastrar"
 		}
+	},
+	"sales": {
+		"titleSummary": "Resumo de vendas",
+		"titleHistory": "Histórico de vendas",
+		"totalApproved": "Pagamentos confirmados: ",
+		"totalUnapproved": "Pagamentos não confirmados: ",
+		"paymentNotConfirmed": "O pagamento desta venda ainda não foi confirmado.",
+		"saleDate": "Data da venda: ",
+		"eventDate": "Data do evento:",
+		"ticketsListTitle": "Valor total <span class=\"value\">{{valor}}</span>"
 	}
 }

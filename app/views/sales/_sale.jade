@@ -1,0 +1,30 @@
+div.row: div.col-md-12: li.sale-container
+  if sale.payment_status.toLowerCase() !== 'approved'
+    div.alert.alert-warning
+      strong= t('sales.paymentNotConfirmed')
+  
+  div.col-md-3.event-image
+    img(src="http://placehold.it/250x150")
+  div.col-md-5
+    div
+      h2.subtitle #{sale.event.name}
+    div
+      span
+        b= t('sales.saleDate')
+        | #{helpers.dateFormat.format(sale.date, 'dd/mm/yyyy, HH:MM')}
+    div
+      span
+        b= t('sales.eventDate')
+        | #{helpers.dateFormat.format(sale.event.scheduled_date, 'dd/mm/yyyy, HH:MM')}
+  div.col-md-4.event-tickets
+    h2.subtitle !{t("sales.ticketsListTitle", {"valor": helpers.numeral.real(sale.total_price)})}
+
+        
+  //- div #{sale.event.name}
+  //- div #{sale.total_price}
+  //- div #{sale.payment_status}
+  //- each item in sale.items
+  //-   div 
+  //-     span #{item.ticket_type}
+  //-     span #{item.quantity}
+  //-     span #{item.total_price}

@@ -1,5 +1,20 @@
 extends /base
 
+block active-menu
+  - var activeMenu = t('sideMenu.sales');
+  
 block container
-  each sale in sales
-    div #{sale.event.name}
+  include /shared/_user-theaters
+  
+  h2.subtitle= t('sales.titleSummary')
+  div.sales-summary-container
+    div.alert.alert-success #{t('sales.totalApproved')}
+      span.value.subtitle #{helpers.numeral.real(totalApproved)}
+    div.alert.alert-warning #{t('sales.totalUnapproved')}
+      span.value.subtitle #{helpers.numeral.real(totalUnapproved)}
+  
+  h2.subtitle= t('sales.titleHistory')
+  div.sales-history-container
+    ul
+      each sale in sales
+        include ./_sale

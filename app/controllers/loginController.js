@@ -43,6 +43,7 @@ class LoginController {
       res: res,
       url: `${config.authApi}/users`,
       cb: (apiError, apiRes, apiBody) => {
+        debugger
         if(apiRes.statusCode === 200) {
           let loggedUser = JSON.parse(apiBody);
           req.headers.cookie += '; qettal2LoggedUser=' + loggedUser.name;
@@ -74,7 +75,7 @@ class LoginController {
           req.userTheaters = theatersJSON;
 
           if(theatersJSON.length === 0) {
-            res.redirect('/teatro/novo');
+            res.redirect('/teatros/novo');
           }
           else {
             res.redirect(`/teatros/${req.userTheaters[0].id}/eventos`);
