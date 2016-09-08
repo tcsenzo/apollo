@@ -43,7 +43,6 @@ class LoginController {
       res: res,
       url: `${config.authApi}/users`,
       cb: (apiError, apiRes, apiBody) => {
-        debugger
         if(apiRes.statusCode === 200) {
           let loggedUser = JSON.parse(apiBody);
           req.headers.cookie += '; qettal2LoggedUser=' + loggedUser.name;
