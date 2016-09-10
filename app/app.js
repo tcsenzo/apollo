@@ -79,8 +79,8 @@ class App {
 	}
 
 	startServer(server) {
-		let port = process.env.PORT || 4001,
-				serverName = process.env.IP || `localhost`;
+		let port = 4001,
+				serverName = `0.0.0.0`;
 
 		server.listen(port, serverName, () => console.log(`Listening on ${serverName}:${port}`));
 	}
