@@ -4,3 +4,4 @@ app/assets/dist/*
 !app/assets/dist/bootstrap
 !app/assets/dist/images
 *.log
+build

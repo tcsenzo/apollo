@@ -1,0 +1,11 @@
+imagetag: leocwolter/apollo
+downloadpath: build
+s3:
+  bucket: prod.qettal.config
+  basepath: apollo
+files:
+  - s3path: config.js
+    filename: config.js
+    permission: 0644
+commands:
+  - npm install
