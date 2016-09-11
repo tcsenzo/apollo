@@ -5,7 +5,20 @@
 
 ### At ec2
 
-- Run the checkout container linked with the mysql instance:
+- Pull the new version 
+
+```bash
+docker pull leocwolter/apollo
+```
+
+- Stop and remove the running container
+
+```
+docker stop apollo
+docker rm apollo
+```
+
+- Run the container:
 
 ```bash
 docker run --name apollo -p 8080:4001 -d leocwolter/apollo
