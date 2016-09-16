@@ -84,5 +84,15 @@
 		"saleDate": "Data da venda: ",
 		"eventDate": "Data do evento:",
 		"ticketsListTitle": "Valor total <span class=\"value\">{{valor}}</span>"
+	},
+	"event": {
+		"scheduled_date": "Data agendada: ",
+		"price": "Preço: ",
+		"original_price": "Preço antigo: ",
+		"address": "Endereço: ",
+		"available_quantity": "Quantidade disponível: ",
+		"description": "Descrição: ",
+		"edit": "Editar",
+		"delete": "Apagar"
 	}
 }

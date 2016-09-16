@@ -23,6 +23,8 @@ class Router {
 		app.get('/teatros/:theaterId(\\d+)/eventos/novo', (req, res) => controllers.eventsController.new(req, res));
 		app.post('/teatros/:theaterId(\\d+)/eventos/novo', (req, res) => controllers.eventsController.create(req, res));
 
+		app.get('/teatros/:theaterId(\\d+)/eventos/:eventId(\\d+)', (req, res) => controllers.eventsController.show(req, res));
+
 		app.get('/teatros/:theaterId(\\d+)/vendas', (req, res) => controllers.salesController.index(req, res));
 	}
 }

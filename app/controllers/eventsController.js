@@ -38,6 +38,19 @@ class EventsController {
     });
   }
 
+  show(req, res) {
+    helpers.requestMid.request({
+      req: req,
+      res: res,
+      url: `${config.theaterEventsApi}/events/${req.params.eventId}`,
+      cb: (apiError, apiRes, apiBody) => {
+        if(apiRes.statusCode === 200) {
+          res.render('events/show', {'event': JSON.parse(apiBody)});
+        }
+      }
+    });
+  }
+
   uglify(event) {
     event.price = parseFloat(event.price.replace(',', '.'));
     event.original_price = parseFloat(event.original_price.replace(',', '.'));

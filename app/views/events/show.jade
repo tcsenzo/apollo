@@ -1,0 +1,34 @@
+extends /base
+
+block container
+  h1.title #{event.name}
+  div.row
+    div.col-md-5
+      section.image-container
+        img(src="http://placehold.it/450x300")
+    div.col-md-7
+      section.event-data-container
+        div
+          b= t('event.scheduled_date')
+          | #{helpers.dateFormat.format(event.scheduled_date, 'dd/mm/yyyy, HH:MM')}
+        div
+          b= t('event.price')
+          | #{helpers.numeral.real(event.price)}
+        div
+          b= t('event.original_price')
+          | #{helpers.numeral.real(event.original_price)}
+        div
+          b= t('event.address')
+          | #{event.theater.address.street + ', ' + event.theater.address.number}
+        div
+          b= t('event.available_quantity')
+          | #{event.available_quantity}
+        div.controls
+          a(href="#{event.id + '/editar'}").btn.btn-default= t('event.edit')
+          a(href="#{event.id + '/apagar'}").btn.btn-danger= t('event.delete')
+  div.row
+    div.col-md-12
+      section.event-description-container
+        div
+          b= t('event.description')
+        div #{event.description}
