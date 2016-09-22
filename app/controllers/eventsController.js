@@ -55,7 +55,7 @@ class EventsController {
     event.price = parseFloat(event.price.replace(',', '.'));
     event.original_price = parseFloat(event.original_price.replace(',', '.'));
     event.available_quantity = parseInt(event.available_quantity);
-    event.scheduled_date = moment(event.scheduled_date, 'DD/MM/YYYY hh:mm').format('YYYY-MM-DDThh:mm:ss');
+    event.scheduled_date = moment(event.scheduled_date, 'DD/MM/YYYY hh:mm').format();
   }
 }
 
