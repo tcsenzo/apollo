@@ -19,7 +19,7 @@ class RequestMid {
     }
 
     request(requestOptions, (error, response, body) => {
-      if(response.statusCode === 401) {
+      if(response.statusCode === 401 && options.req.path !== '/login') {
         options.res.redirect(`/login`);
         return false;
       }
