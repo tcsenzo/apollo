@@ -11,11 +11,11 @@ div.row: div.col-md-12: li.sale-container
     div
       span
         b= t('sales.saleDate')
-        | #{helpers.dateFormat.format(sale.date, 'dd/mm/yyyy, HH:MM')}
+        | #{helpers.moment.systemToHuman(sale.date)}
     div
       span
         b= t('sales.eventDate')
-        | #{helpers.dateFormat.format(sale.event.scheduled_date, 'dd/mm/yyyy, HH:MM')}
+        | #{helpers.moment.systemToHuman(sale.event.scheduled_date)}
   div.col-md-4.event-tickets
     h2.subtitle !{t("sales.ticketsListTitle", {"valor": helpers.numeral.real(sale.total_price)})}
 

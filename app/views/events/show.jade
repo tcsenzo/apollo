@@ -10,7 +10,7 @@ block container
       section.event-data-container
         div
           b= t('event.scheduled_date')
-          | #{helpers.dateFormat.format(event.scheduled_date, 'dd/mm/yyyy, HH:MM')}
+          | #{helpers.moment.systemToHuman(event.scheduled_date)}
         div
           b= t('event.price')
           | #{helpers.numeral.real(event.price)}
