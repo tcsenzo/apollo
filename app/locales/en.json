@@ -94,5 +94,14 @@
 		"description": "Descrição: ",
 		"edit": "Editar",
 		"delete": "Apagar"
+	},
+	"ticket": {
+		"valid": {
+			"title": "Ingresso válido",
+			"buyer": "Comprador: "
+		},
+		"invalid": {
+			"title": "Ingresso inválido"
+		}
 	}
 }

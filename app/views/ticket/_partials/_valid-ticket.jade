@@ -1,0 +1,14 @@
+div.title= t('ticket.valid.title')
+
+div.content
+  div.icons
+    span.fa.fa-check
+    span.fa.fa-ticket
+  
+  div.ticket-data
+    div
+      div.subtitle #{ticket.event.name}
+      div #{helpers.moment.systemToHuman(ticket.event.scheduled_date) + ', ' + ticket.event.theater.name}
+    div
+      b= t('ticket.valid.buyer')
+      | #{ticket.user.name}

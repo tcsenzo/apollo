@@ -1,0 +1,11 @@
+extends /base
+
+block side-menu
+
+block container
+  section.centered-box.ticket-validate
+  
+    if ticket
+      include ./_partials/_valid-ticket
+    else
+      include ./_partials/_invalid-ticket
