@@ -49,6 +49,7 @@
 	},
 	"theaters": {
 		"new": {
+			"title": "Novo teatro",
 			"name": "Nome",
 			"street": "Rua",
 			"number": "Número",
@@ -66,6 +67,7 @@
 			"content": "Novo evento criado com sucesso."
 		},
 		"new": {
+			"title": "Novo evento",
 			"name": "Nome",
 			"description": "Descrição",
 			"price": "Preço",

@@ -3,6 +3,7 @@ extends /base
 block side-menu
 
 block container
+  div.title= t('theaters.new.title')
   form(action="/teatros/novo" method="POST")
     div.form-group
       label(for="name")= t("theaters.new.name")
