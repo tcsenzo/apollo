@@ -18,6 +18,10 @@ class RequestMid {
       requestOptions.json = options.jsonParams;
     }
 
+    if(options.formData) {
+      requestOptions.formData = options.formData;
+    }
+
     request(requestOptions, (error, response, body) => {
       if(response.statusCode === 401 && options.req.path !== '/login') {
         options.res.redirect(`/login`);
