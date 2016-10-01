@@ -6,7 +6,7 @@ block active-menu
 block container
   include /shared/_user-theaters
   div.subtitle= t('events.new.title')
-  form(method="POST")
+  form(method="POST").new-event-form
     input(type="hidden" name="theater[id]" value="#{theaterId}")
     //- form(action="/image-upload" enctype="multipart/form-data" method="POST")
     div.form-group
@@ -15,7 +15,7 @@ block container
       button.btn.btn-default.event-upload-image-btn= t('events.new.upload')
     div.form-group
       label(for="name")= t("events.new.name")
-      input(type="text" name="name" placeholder=t("events.new.name")).form-control
+      input(type="text" name="name" data-validation="required" placeholder=t("events.new.name")).form-control
     div.form-group
       label(for="description")= t("events.new.description")
       input(type="text" name="description" placeholder=t("events.new.description")).form-control
