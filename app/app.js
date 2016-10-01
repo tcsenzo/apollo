@@ -9,6 +9,7 @@ let Router = require(`./router`),
 		session = require(`express-session`),
 		cookieParser = require(`cookie-parser`),
 		cookie = require('cookie'),
+		busboy = require('connect-busboy'),
 		config = require('./config.js');
 
 class App {
@@ -49,6 +50,8 @@ class App {
 		app.use(bodyParser.urlencoded({
 		  extended: true
 		}));
+
+		app.use(busboy());
 
 		app.use(session({
 			secret: 'qettal',

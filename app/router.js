@@ -12,6 +12,8 @@ class Router {
 		app.post('/login', (req, res) => controllers.loginController.login(req, res));
 		app.post('/logout', (req, res) => controllers.loginController.logout(req, res));
 
+		app.post('/image-upload', (req, res) => controllers.imageUpload.upload(req, res));
+
 		app.get('/ticket/:ticketHash', helpers.auth.authorize, (req, res) => controllers.ticketController.show(req, res));
 
 		app.get('/teatros/*', helpers.auth.authorize);

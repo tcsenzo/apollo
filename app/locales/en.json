@@ -68,6 +68,8 @@
 		},
 		"new": {
 			"title": "Novo evento",
+			"image": "Imagem",
+			"upload": "Fazer upload",
 			"name": "Nome",
 			"description": "Descrição",
 			"price": "Preço",
