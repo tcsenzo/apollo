@@ -22,14 +22,14 @@ class EventsController {
   }
 
   create(req, res) {
-    this.uglify(req.body);
+    let eventJSON = this.uglify(req.body);
 
     helpers.requestMid.request({
       url: `${config.theaterEventsApi}/events`,
       method: 'POST',
       req: req,
       res: res,
-      jsonParams: req.body,
+      jsonParams: eventJSON,
       cb: (apiError, apiRes, apiBody) => {
         if(apiRes.statusCode === 201) {
           res.redirect('../eventos?newEvent=true');
@@ -52,10 +52,18 @@ class EventsController {
   }
 
   uglify(event) {
-    event.price = parseFloat(event.price.replace(',', '.'));
-    event.original_price = parseFloat(event.original_price.replace(',', '.'));
-    event.available_quantity = parseInt(event.available_quantity);
-    event.scheduled_date = helpers.moment.humanToSystem(event.scheduled_date);
+    return {
+      price: parseFloat(event.price.replace(',', '.')),
+      original_price: parseFloat(event.original_price.replace(',', '.')),
+      available_quantity: parseInt(event.available_quantity),
+      scheduled_date: helpers.moment.humanToSystem(event.scheduled_date),
+      name: event.name,
+      description: event.description,
+      image: event.image,
+      theater: {
+        id: event.theater.id
+      }
+    }
   }
 }
 

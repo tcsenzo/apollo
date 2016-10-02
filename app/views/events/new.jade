@@ -8,11 +8,12 @@ block container
   div.subtitle= t('events.new.title')
   form(method="POST").new-event-form
     input(type="hidden" name="theater[id]" value="#{theaterId}")
-    //- form(action="/image-upload" enctype="multipart/form-data" method="POST")
     div.form-group
-      label(for="image")= t("events.new.image")
-      input(type="file" name="image" placeholder=t("events.new.name")).form-file.event-image-input
+      label(for="imageUpload")= t("events.new.image")
+      input(type="file" name="imageUpload" placeholder=t("events.new.name")).form-file.event-image-input
       button.btn.btn-default.event-upload-image-btn= t('events.new.upload')
+      input(type="hidden" name="image" value="").image-hidden-field
+      p.image-name-placeholder= t('events.new.noImage')
     div.form-group
       label(for="name")= t("events.new.name")
       input(type="text" name="name" data-validation="required" placeholder=t("events.new.name")).form-control

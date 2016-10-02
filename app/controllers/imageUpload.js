@@ -16,30 +16,35 @@ class ImageUploadController {
       fstream = fs.createWriteStream(imgPath);
       file.pipe(fstream);
       fstream.on('close', function () {
-        that.apiUpload(imgPath, req, res);
+        that.apiUpload(imgPath, fileName, req, res);
       });
     });
   }
 
-  apiUpload(imgPath, req, res) {
-    fs.readFile(imgPath, (err, data) => {
+  apiUpload(imgPath, imgName, req, res) {
 
-      let formData = {
-        image: new Buffer(data).toString('base64')
-      };
+    let formData = {
+      image: fs.createReadStream(imgPath),
+    };
 
 
-      helpers.requestMid.request({
-        req: req,
-        res: res,
-        url: `${config.theaterEventsApi}/events/image`,
-        'formData': formData,
-        cb: (apiError, apiRes, apiBody) => {
-          //apaga o arquivo apos salvar
-          fs.unlinkSync(imgPath);
+    helpers.requestMid.request({
+      req: req,
+      res: res,
+      method: 'POST',
+      url: `${config.theaterEventsApi}/events/image`,
+      'formData': formData,
+      cb: (apiError, apiRes, apiBody) => {
+        let resJSON = {
+          imageName: imgName,
+          imageServerName: JSON.parse(apiBody).image
         }
-      });
+
+        fs.unlinkSync(imgPath);
+        res.json(resJSON);
+      }
     });
+
   }
 }
 

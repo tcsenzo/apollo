@@ -69,6 +69,7 @@
 		"new": {
 			"title": "Novo evento",
 			"image": "Imagem",
+			"noImage": "Nenhuma imagem selecionada",
 			"upload": "Fazer upload",
 			"name": "Nome",
 			"description": "Descrição",

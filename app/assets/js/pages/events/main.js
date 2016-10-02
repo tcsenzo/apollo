@@ -2,7 +2,9 @@ require('../../main');
 
 var globals = {
   $fileInput: $('.event-image-input'),
-  $uploadBtn: $('.event-upload-image-btn')
+  $uploadBtn: $('.event-upload-image-btn'),
+  $imageHiddenField: $('.image-hidden-field'),
+  $imageNamePlaceholder: $('.image-name-placeholder')
 }
 
 function ImageUpload() {
@@ -31,10 +33,13 @@ ImageUpload.prototype.upload = function (e) {
     contentType: false,
     type: 'POST',
     success: function(data){
-      alert(data);
+      debugger;
+      if(data) {
+        globals.$imageHiddenField.val(data.imageServerName);
+        globals.$imageNamePlaceholder.html(data.imageName);
+      }
     }
   });
-  console.log(globals.$fileInput[0].files);
 };
 
 new ImageUpload();
