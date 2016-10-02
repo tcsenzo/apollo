@@ -56,7 +56,7 @@ class EventsController {
       price: parseFloat(event.price.replace(',', '.')),
       original_price: parseFloat(event.original_price.replace(',', '.')),
       available_quantity: parseInt(event.available_quantity),
-      scheduled_date: helpers.moment.humanToSystem(event.scheduled_date),
+      scheduled_date: helpers.moment.humanToSystem(`${event.scheduled_date} ${event.scheduled_hour}`),
       name: event.name,
       description: event.description,
       image: event.image,

@@ -78,6 +78,7 @@
 			"original_price": "Preço original",
 			"available_quantity": "Quantidade disponível",
 			"scheduled_date": "Data do evento",
+			"scheduled_hour": "Hora do evento",
 			"save": "Cadastrar"
 		}
 	},

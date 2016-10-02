@@ -11,9 +11,6 @@ var globals = {
 
 function ImageUpload() {
   this.binds();
-  $(document).ready(function() {
-    $.validate();
-  })
 }
 
 ImageUpload.prototype.binds = function () {

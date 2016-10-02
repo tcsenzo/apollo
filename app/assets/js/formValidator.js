@@ -2,7 +2,11 @@ require('./ptBr.js');
 
 function FormValidator() {
   $(document).ready(function() {
-    $.validate();
+    $.validate({
+      validateHiddenInputs: true,
+      language: 'pt',
+      dateFormat: 'dd/mm/yyyy'
+    });
   })
 }
 
