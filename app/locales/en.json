@@ -68,8 +68,9 @@
 		},
 		"new": {
 			"title": "Novo evento",
+			"browseFile": "Procurar imagem",
 			"image": "Imagem",
-			"noImage": "Nenhuma imagem selecionada",
+			"noImage": "Nenhuma imagem enviada",
 			"upload": "Fazer upload",
 			"name": "Nome",
 			"description": "Descrição",

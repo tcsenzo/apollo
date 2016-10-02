@@ -4,7 +4,9 @@ var globals = {
   $fileInput: $('.event-image-input'),
   $uploadBtn: $('.event-upload-image-btn'),
   $imageHiddenField: $('.image-hidden-field'),
-  $imageNamePlaceholder: $('.image-name-placeholder')
+  $imageNamePlaceholder: $('.image-name-placeholder'),
+  $loader: $('.upload-overlay'),
+  $successIcon: $('.upload-container .fa-check')
 }
 
 function ImageUpload() {
@@ -25,6 +27,7 @@ ImageUpload.prototype.upload = function (e) {
       formData = new FormData();
 
   formData.append('image', file);
+  globals.$loader.fadeIn(100);
 
   $.ajax({
     url: '/image-upload',
@@ -33,11 +36,14 @@ ImageUpload.prototype.upload = function (e) {
     contentType: false,
     type: 'POST',
     success: function(data){
-      debugger;
       if(data) {
         globals.$imageHiddenField.val(data.imageServerName);
         globals.$imageNamePlaceholder.html(data.imageName);
+
+        globals.$successIcon.show();
       }
+
+      globals.$loader.hide()
     }
   });
 };
