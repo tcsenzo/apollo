@@ -13,12 +13,12 @@ block container
         div.col-md-12: div.form-login-container
           div.form-container: form(action="/login" method="POST" role="form")
             if posLogin
-              input(type="hidden", name="posLogin", value="#{posLogin}")
+              input(type="hidden" name="posLogin" value="#{posLogin}")
             div.form-group
               label(for="email")= t("login.email")
-              input(type="text" name="email" placeholder=t("login.email")).form-control
+              input(type="text" name="email" data-validation="required email" placeholder=t("login.email")).form-control
             div.form-group
               label(for="password")= t("login.password")
-              input(type="password" name="password" placeholder=t("login.password")).form-control
+              input(type="password" name="password" data-validation="required" placeholder=t("login.password")).form-control
             button(type="submit").btn.btn-default= t("login.saveButton")
     
