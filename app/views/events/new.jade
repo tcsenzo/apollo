@@ -26,22 +26,25 @@ block container
       textarea(rows="4" name="description" data-validation="required" placeholder=t("events.new.description")).form-control
     div.form-group
       label(for="price")= t("events.new.price")
-      div.input-group
+      div.input-group.col-md-3
         div.input-group-addon R$
         input(type="text" name="price" data-validation="required" placeholder=t("events.new.price") data-mask="#.##0,00" data-mask-reverse="true").form-control
     div.form-group
       label(for="original_price")= t("events.new.original_price")
-      div.input-group
+      div.input-group.col-md-3
         div.input-group-addon R$
         input(type="text" name="original_price" data-validation="required" placeholder=t("events.new.original_price") data-mask="#.##0,00" data-mask-reverse="true").form-control
     div.form-group
-      label(for="available_quantity")= t("events.new.available_quantity")
-      input(type="text" name="available_quantity" data-validation="required number" placeholder=t("events.new.available_quantity")).form-control
+      div.input-group.col-md-2
+        label(for="available_quantity")= t("events.new.available_quantity")
+        input(type="text" name="available_quantity" data-validation="required number" placeholder=t("events.new.available_quantity")).form-control
     div.form-group
-      label(for="scheduled_date")= t("events.new.scheduled_date")
-      input(type="text" name="scheduled_date" data-validation="required date" placeholder=t("events.new.scheduled_date") data-mask="00/00/0000").form-control
+      div.input-group.col-md-2
+        label(for="scheduled_date")= t("events.new.scheduled_date")
+        input(type="text" name="scheduled_date" data-validation="required date" placeholder=t("events.new.scheduled_date") data-mask="00/00/0000").form-control
     div.form-group
-      label(for="scheduled_hour")= t("events.new.scheduled_hour")
-      input(type="text" name="scheduled_hour" data-validation="required" placeholder=t("events.new.scheduled_hour") data-mask="00:00").form-control
+      div.input-group.col-md-2
+        label(for="scheduled_hour")= t("events.new.scheduled_hour")
+        input(type="text" name="scheduled_hour" data-validation="required" placeholder=t("events.new.scheduled_hour") data-mask="00:00").form-control
     
     button(type="submit").btn.btn-default= t('events.new.save')
