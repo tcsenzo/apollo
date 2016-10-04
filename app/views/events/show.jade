@@ -5,7 +5,7 @@ block container
   div.row
     div.col-md-5
       section.image-container
-        img(src="#{event.image}")
+        img(src="#{event.image}").img-responsive
     div.col-md-7
       section.event-data-container
         div
@@ -23,9 +23,9 @@ block container
         div
           b= t('event.available_quantity')
           | #{event.available_quantity}
-        div.controls
-          a(href="#{event.id + '/editar'}").btn.btn-default= t('event.edit')
-          a(href="#{event.id + '/apagar'}").btn.btn-danger= t('event.delete')
+        //- div.controls
+        //-   a(href="#{event.id + '/editar'}").btn.btn-default= t('event.edit')
+        //-   a(href="#{event.id + '/apagar'}").btn.btn-danger= t('event.delete')
   div.row
     div.col-md-12
       section.event-description-container
